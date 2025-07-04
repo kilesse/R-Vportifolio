@@ -1,0 +1,105 @@
+.orbitron-uniquifier {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+html{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: #041D07;
+    color:white;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+     background-color: black;
+     width: 100%;
+     margin: 0;
+     padding-left: 10px;
+     display: grid;
+     grid-template-columns: repeat(2,2fr);
+     align-items: center;
+
+}
+
+header img{
+    height: 12vh;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    margin-right: 5vw;
+    font-weight: bold;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title h1{
+    font-size: 10vh;    
+    font-weight: bolder;
+    font-family: "Orbitron", sans-serif;
+     background: linear-gradient(to right, #00ff00, #fcfcfc, #00ff00);
+      background-size: 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate-gradient 5s linear infinite;
+}
+
+    @keyframes animate-gradient{
+      to {
+        background-position: 150%;
+      }
+    }
+
+.firstText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(109, 164, 118, 0.485);
+    border-radius: 30px;
+    padding: 0 2vh 0 2vh;
+    font-size: 2vh;
+    margin-top: 10vh;
+    height: 5vh;
+}
+
+.firstText h3 a{
+    padding-left: 1vw;
+    color: #00ff00;
+    transition: ease-in-out;
+}
+
+.firstText h3 a:hover{
+    text-decoration: underline;
+}
+
+.circle{
+    width: 0.7vw;
+    height: 1.5vh;
+    border-radius: 50%;
+    background-color: #00ff00;
+    
+    margin-right: 0.5vw;
+}
+
+
