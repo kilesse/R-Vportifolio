@@ -1,77 +1,93 @@
 .orbitron-uniquifier {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 
-html{
+html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-body{
+body {
     background-color: #041D07;
-    color:white;
+    color: white;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
 
-header{
-     background-color: black;
-     width: 100%;
-     margin: 0;
-     padding-left: 10px;
-     display: grid;
-     grid-template-columns: repeat(2,2fr);
-     align-items: center;
+header {
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
 
 }
 
-header img{
+header img {
     height: 12vh;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: white;
     margin-right: 5vw;
     font-weight: bold;
 }
 
-.title{
+.title {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 60vh;
+    padding-top: 10vh;
+    background-color: rgba(4, 29, 7, 0.95); 
+    backdrop-filter: blur(2px);
+
 }
 
 
-.title h1{
-    font-size: 10vh;    
+.title h1 {
+    font-size: 10vh;
     font-weight: bolder;
     font-family: "Orbitron", sans-serif;
-     background: linear-gradient(to right, #00ff00, #fcfcfc, #00ff00);
-      background-size: 200%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: animate-gradient 5s linear infinite;
+    background: linear-gradient(to right, #00ff00, #fcfcfc, #00ff00);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 5s linear infinite;
 }
 
-    @keyframes animate-gradient{
-      to {
-        background-position: 150%;
-      }
-    }
 
-.firstText{
+
+@keyframes animate-gradient {
+    to {
+        background-position: 150%;
+    }
+}
+
+.title h2{
+    font-size: 4vh;
+}
+
+.firstText {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,23 +99,61 @@ header a{
     height: 5vh;
 }
 
-.firstText h3 a{
+.firstText h3 a {
     padding-left: 1vw;
     color: #00ff00;
     transition: ease-in-out;
 }
 
-.firstText h3 a:hover{
+.firstText h3 a:hover {
     text-decoration: underline;
 }
 
-.circle{
+.circle {
     width: 0.7vw;
     height: 1.5vh;
     border-radius: 50%;
     background-color: #00ff00;
-    
     margin-right: 0.5vw;
 }
 
+.image {
+    background-image: url("images/plano-de-fundo-hacker-de-matriz\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height:70vh;
+    position: relative;
+    z-index: 0;
 
+}
+
+
+.abordagem{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+    padding-top: 10vh;
+    background-color: rgba(4, 29, 7, 0.95); 
+    backdrop-filter: blur(2px);
+    padding-left: 20vw;
+}
+
+
+.abordagem h1{
+    font-size: 5.5vh;
+    color: #00ff0082;
+    text-transform: uppercase;
+    
+}
+
+.abordagem p{
+    font-size: 3vh;
+    text-align: left;
+    margin-right: 40vw;
+}
