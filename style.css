@@ -27,7 +27,6 @@ body {
 }
 
 header {
-    background-color: black;
     width: 100%;
     margin: 0;
     padding-left: 10px;
@@ -38,7 +37,7 @@ header {
 }
 
 header img {
-    height: 12vh;
+    height: 10vh;
 }
 
 header a {
@@ -55,9 +54,9 @@ header a {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
     padding-top: 10vh;
-    background-color: rgba(4, 29, 7, 0.95); 
+    background-color: rgba(4, 29, 7, 0.95);
     backdrop-filter: blur(2px);
 
 }
@@ -83,7 +82,7 @@ header a {
     }
 }
 
-.title h2{
+.title h2 {
     font-size: 4vh;
 }
 
@@ -124,36 +123,56 @@ header a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100vw;
-    height:70vh;
+    height: 70vh;
     position: relative;
     z-index: 0;
 
 }
 
 
-.abordagem{
+.abordagem {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
     width: 100vw;
     height: 60vh;
-    padding-top: 10vh;
-    background-color: rgba(4, 29, 7, 0.95); 
+    padding-top: 20vh;
+    background-color: rgba(4, 29, 7, 0.95);
     backdrop-filter: blur(2px);
-    padding-left: 20vw;
+    padding-left: 10vw;
+    padding-bottom: 50vh;
 }
 
 
-.abordagem h1{
+.abordagem h1 {
     font-size: 5.5vh;
     color: #00ff0082;
     text-transform: uppercase;
-    
+
 }
 
-.abordagem p{
+.abordagem p {
     font-size: 3vh;
     text-align: left;
-    margin-right: 40vw;
+
+}
+
+.abordagem img {
+    width: 40vw;
+    height: 70vh;
+    z-index: 1;
+    border-radius: 3%;
+
+}
+
+.abordagem .container {
+    background-color: #035d03;
+    z-index: 3;
+    position: absolute;
+    border-radius: 3%;
+    height: 47vh;
+    width: 45vw;
+    margin-top: 9vh;
+    margin-left: 30vw;
+    padding: 3vh 3vw;
 }
