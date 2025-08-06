@@ -30,16 +30,32 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
-  <header class="w-full grid grid-cols-2 items-center bg-transparent px-4 py-2 z-10 relative">
+<header class="w-full bg-transparent px-4 py-2 z-10 relative">
+  <div class="flex justify-between items-center">
     <img src="assets/logo.png" alt="logo" class="h-[10vh]" />
-    <div class="flex justify-end gap-8 font-bold text-white">
+
+    <!-- Botão do menu hambúrguer visível apenas no mobile -->
+    <button class="md:hidden text-white" id="menu-toggle">
+      ☰
+    </button>
+
+    <!-- Menu de navegação (desktop) -->
+    <nav class="hidden md:flex gap-8 font-bold text-white">
       <a href="#1">Sobre</a>
       <a href="#2">Nossos Projetos</a>
       <a href="#3">Sobre nós</a>
       <a href="#">Entre em contato</a>
-    </div>
-    
-  </header>
+    </nav>
+  </div>
+
+  <!-- Menu mobile (inicialmente escondido) -->
+  <nav class="md:hidden hidden flex-col items-start gap-4 mt-4 text-white font-bold" id="mobile-menu">
+    <a href="#1">Sobre</a>
+    <a href="#2">Nossos Projetos</a>
+    <a href="#3">Sobre nós</a>
+    <a href="#">Entre em contato</a>
+  </nav>
+</header>
 
   <div class="relative h-[90vh] w-full overflow-hidden -translate-y-[12vh]">
     <video src="assets/7534239-hd_1920_1080_25fps.mp4" autoplay muted loop
