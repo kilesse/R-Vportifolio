@@ -30,12 +30,13 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
+
 <header class="w-full bg-transparent px-4 py-2 z-10 relative">
   <div class="flex justify-between items-center">
     <img src="assets/logo.png" alt="logo" class="h-[10vh]" />
 
     <!-- Botão do menu hambúrguer visível apenas no mobile -->
-    <button class="md:hidden text-white" id="menu-toggle">
+    <button class="md:hidden text-white text-4x1 p-2" id="menu-toggle">
       ☰
     </button>
 
@@ -47,16 +48,24 @@
       <a href="#">Entre em contato</a>
     </nav>
   </div>
+ 
 
   <!-- Menu mobile (inicialmente escondido) -->
-  <nav class="md:hidden hidden flex-col items-start gap-4 mt-4 text-white font-bold" id="mobile-menu">
+  <nav class="md:hidden hidden flex flex-col items-end gap-4 mt-4 text-white text-right font-bold " id="mobile-menu">
     <a href="#1">Sobre</a>
     <a href="#2">Nossos Projetos</a>
     <a href="#3">Sobre nós</a>
     <a href="#">Entre em contato</a>
   </nav>
 </header>
+   <script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
 
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
   <div class="relative h-[90vh] w-full overflow-hidden -translate-y-[12vh]">
     <video src="assets/7534239-hd_1920_1080_25fps.mp4" autoplay muted loop
       class="absolute top-0 left-0 w-full h-full object-cover -mt-[10vh] "></video>
