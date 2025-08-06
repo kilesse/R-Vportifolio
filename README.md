@@ -10,9 +10,9 @@
 ```
 salvar as imagens na pasta assets
 
-# Adicionar imagens nas linhas:
 
-colocar logo PNG na linha 
+
+### colocar logo PNG na linha 
 ```
 34;
 ```
