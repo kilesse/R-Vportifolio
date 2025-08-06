@@ -31,44 +31,53 @@
 
 <body class="bg-black text-white overflow-x-hidden">
 
-<header class="w-full bg-transparent px-4 py-2 z-10 relative">
-  <div class="flex justify-between items-center">
-    <img src="assets/logo.png" alt="logo" class="h-[10vh]" />
+  <header class="w-full bg-transparent px-4 py-2 z-10 relative">
+    <div class="flex justify-between items-center">
+      <img src="assets/logo.png" alt="logo" class="h-[10vh]" />
 
-    <!-- Botão do menu hambúrguer visível apenas no mobile -->
-    <button class="md:hidden text-white text-4x1 p-2" id="menu-toggle">
-      ☰
-    </button>
+      <!-- Botão do menu hambúrguer visível apenas no mobile -->
+      <button class="md:hidden text-white text-4x1 p-2" id="menu-toggle">
+        ☰
+      </button>
 
-    <!-- Menu de navegação (desktop) -->
-    <nav class="hidden md:flex gap-8 font-bold text-white">
+      <!-- Menu de navegação (desktop) -->
+      <nav class="hidden md:flex gap-8 font-bold text-white">
+        <a href="#1">Sobre</a>
+        <a href="#2">Nossos Projetos</a>
+        <a href="#3">Sobre nós</a>
+        <a href="#">Entre em contato</a>
+      </nav>
+    </div>
+
+
+    <!-- Menu mobile (inicialmente escondido) -->
+    <nav class="md:hidden hidden flex flex-col items-end gap-4 mt-4 text-white text-right font-bold " id="mobile-menu">
       <a href="#1">Sobre</a>
       <a href="#2">Nossos Projetos</a>
       <a href="#3">Sobre nós</a>
       <a href="#">Entre em contato</a>
     </nav>
-  </div>
- 
+  </header>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
 
-  <!-- Menu mobile (inicialmente escondido) -->
-  <nav class="md:hidden hidden flex flex-col items-end gap-4 mt-4 text-white text-right font-bold " id="mobile-menu">
-    <a href="#1">Sobre</a>
-    <a href="#2">Nossos Projetos</a>
-    <a href="#3">Sobre nós</a>
-    <a href="#">Entre em contato</a>
-  </nav>
-</header>
-   <script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
   <div class="relative h-[90vh] w-full overflow-hidden -translate-y-[12vh]">
-    <video src="assets/7534239-hd_1920_1080_25fps.mp4" autoplay muted loop
-      class="absolute top-0 left-0 w-full h-full object-cover -mt-[10vh] "></video>
+   <video
+  src="assets/7534239-hd_1920_1080_25fps.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+  webkit-playsinline
+  disablePictureInPicture
+  class="absolute top-0 left-0 w-full h-full object-cover -mt-[10vh] pointer-events-none"
+></video>
 
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center">
       <div class="flex items-center border-2 border-[#21c760] rounded-full px-4 py-1 mt-2 text-sm">
@@ -133,113 +142,115 @@
 
 
 
-<section id="team" class="py-16 px-6 ">
-  <h1 class="orbitron text-5xl text-center text-[#21c760] font-bold flex items-center justify-center gap-4">
-       Nossos Projetos
+  <section id="team" class="py-16 px-6 ">
+    <h1 class="orbitron text-5xl text-center text-[#21c760] font-bold flex items-center justify-center gap-4">
+      Nossos Projetos
     </h1>
-  <p class="text-center ml-14 text-xl mt-5 text--600 mb-10">Alguns dos projetos mais recentes em que tivemos o prazer de trabalhar</p>
-  <div class="swiper teamSwiper max-w-7xl mx-auto px-4">
-    <div class="swiper-wrapper">
+    <p class="text-center ml-14 text-xl mt-5 text--600 mb-10">Alguns dos projetos mais recentes em que tivemos o prazer
+      de trabalhar</p>
+    <div class="swiper teamSwiper max-w-7xl mx-auto px-4">
+      <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 1" class="w-full h-80 object-cover" />
-      </div>
+        <!-- Slide 1 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 1" class="w-full h-80 object-cover" />
+        </div>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 2" class="w-full h-80 object-cover" />
-      </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 2" class="w-full h-80 object-cover" />
+        </div>
 
-      <!-- Slide 3 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 3" class="w-full h-80 object-cover" />
-      </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 3" class="w-full h-80 object-cover" />
+        </div>
 
-      <!-- Slide 4 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 4" class="w-full h-80 object-cover" />
-      </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 4" class="w-full h-80 object-cover" />
+        </div>
 
-      <!-- Slide 5 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 5" class="w-full h-80 object-cover" />
-      </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 5" class="w-full h-80 object-cover" />
+        </div>
 
-      <!-- Slide 6 -->
-      <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="assets/AllBoro.png" alt="Equipe 6" class="w-full h-80 object-cover" />
-    </div>
-</section>
+        <!-- Slide 6 -->
+        <div class="swiper-slide w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="assets/AllBoro.png" alt="Equipe 6" class="w-full h-80 object-cover" />
+        </div>
+  </section>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<script>
-   const swiper = new Swiper(".teamSwiper", {
-    slidesPerView: 1.1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
+  <script>
+    const swiper = new Swiper(".teamSwiper", {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
       },
-      1024: {
-        slidesPerView: 3,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+        }
       },
-      1280: {
-        slidesPerView: 4,
-      }
-    },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    on: {
-      autoplay: function () {
-        if (!swiper.customDirection) swiper.customDirection = "forward";
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      on: {
+        autoplay: function () {
+          if (!swiper.customDirection) swiper.customDirection = "forward";
 
-        if (swiper.customDirection === "forward") {
-          swiper.slideTo(swiper.activeIndex + 2);
-          swiper.customDirection = "back";
-        } else {
-          swiper.slideTo(swiper.activeIndex - 1);
-          swiper.customDirection = "forward";
+          if (swiper.customDirection === "forward") {
+            swiper.slideTo(swiper.activeIndex + 2);
+            swiper.customDirection = "back";
+          } else {
+            swiper.slideTo(swiper.activeIndex - 1);
+            swiper.customDirection = "forward";
+          }
         }
       }
-    }
-  });
-</script>
+    });
+  </script>
 
 
-<div class="relative">
-  <section class="flex flex-col lg:flex-row items-center py-16 px-6 sm:px-10 lg:px-20 gap-8">
-    
-    <!-- Imagem -->
-    <div class="w-full lg:w-1/2 relative z-0">
-      <img src="assets/imagemComputador.jpg" alt="computadorCodigo"
-        class="w-full h-64 sm:h-80 lg:h-[60vh] object-cover rounded-lg" />
-    </div>
+  <div class="relative">
+    <section class="flex flex-col lg:flex-row items-center py-16 px-6 sm:px-10 lg:px-20 gap-8">
 
-    <!-- Texto sobreposto no desktop -->
-    <div class="bg-[#1A2A25] text-white rounded-lg p-6 sm:p-8 w-full lg:w-1/2 lg:absolute lg:right-20 lg:top-1/2 lg:-translate-y-1/2 z-10 shadow-xl">
-      <h1 class="text-[#21c760] text-3xl sm:text-4xl font-bold uppercase mb-4">Nossa Jornada</h1>
-      <p class="text-base sm:text-lg">
-        Dois desenvolvedores unidos por uma missão: transformar ideias em soluções digitais inteligentes e eficientes.
-        Mais do que escrever código, buscamos entender cada desafio a fundo para criar sistemas e sites sob medida,
-        que realmente fazem a diferença.
-        Combinamos criatividade, técnica e visão estratégica para entregar produtos com qualidade, alta performance e
-        propósito.
-      </p>
-    </div>
+      <!-- Imagem -->
+      <div class="w-full lg:w-1/2 relative z-0">
+        <img src="assets/imagemComputador.jpg" alt="computadorCodigo"
+          class="w-full h-64 sm:h-80 lg:h-[60vh] object-cover rounded-lg" />
+      </div>
 
-  </section>
-</div>
+      <!-- Texto sobreposto no desktop -->
+      <div
+        class="bg-[#1A2A25] text-white rounded-lg p-6 sm:p-8 w-full lg:w-1/2 lg:absolute lg:right-20 lg:top-1/2 lg:-translate-y-1/2 z-10 shadow-xl">
+        <h1 class="text-[#21c760] text-3xl sm:text-4xl font-bold uppercase mb-4">Nossa Jornada</h1>
+        <p class="text-base sm:text-lg">
+          Dois desenvolvedores unidos por uma missão: transformar ideias em soluções digitais inteligentes e eficientes.
+          Mais do que escrever código, buscamos entender cada desafio a fundo para criar sistemas e sites sob medida,
+          que realmente fazem a diferença.
+          Combinamos criatividade, técnica e visão estratégica para entregar produtos com qualidade, alta performance e
+          propósito.
+        </p>
+      </div>
+
+    </section>
+  </div>
 
 
 
